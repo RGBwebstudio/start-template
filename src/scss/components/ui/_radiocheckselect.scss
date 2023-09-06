@@ -1,0 +1,138 @@
+.radio {
+  background-color: #000;
+  &__title {
+    color: #aaaaaa;
+    font-weight: 500;
+    font-size: 3.35em;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+  &__item {
+    color: #aaaaaa;
+    display: block;
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid #333;
+    & input[type='radio'] {
+      position: absolute;
+      visibility: hidden;
+    }
+    & .radio__label {
+      display: block;
+      position: relative;
+      font-weight: 300;
+      font-size: 1.35em;
+      padding: 25px 25px 25px 80px;
+      margin: 10px auto;
+      height: 30px;
+      z-index: 9;
+      cursor: pointer;
+      -webkit-transition: all 0.25s linear;
+    }
+    &:hover .radio__label {
+      color: #ffffff;
+    }
+    &:hover .check {
+      border: 5px solid #ffffff;
+    }
+    &:hover .check::before {
+      display: block;
+      position: absolute;
+      content: '';
+      border-radius: 100%;
+      height: 15px;
+      width: 15px;
+      top: 5px;
+      left: 5px;
+      margin: auto;
+      transition: background 0.25s linear;
+      -webkit-transition: background 0.25s linear;
+    }
+    & .check {
+      display: block;
+      position: absolute;
+      border: 5px solid #aaaaaa;
+      border-radius: 100%;
+      height: 25px;
+      width: 25px;
+      top: 30px;
+      left: 20px;
+      z-index: 5;
+      transition: border 0.25s linear;
+      -webkit-transition: border 0.25s linear;
+    }
+  }
+}
+
+input[type='radio']:checked ~ .check {
+  border: 5px solid #0dff92;
+}
+
+input[type='radio']:checked ~ .check::before {
+  background: #0dff92;
+}
+
+input[type='radio']:checked ~ .radio__label {
+  color: #0dff92;
+}
+
+.checkbox {
+  &__title {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 30px;
+  }
+  &__label {
+    position: relative;
+    cursor: pointer;
+  }
+  &__label::before {
+    position: absolute;
+    top: 2px;
+    left: -44px;
+    z-index: 1;
+    width: 16px;
+    height: 16px;
+    content: '';
+    border: 2px solid #5a5a5a;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+  }
+}
+
+// input[type='checkbox'] {
+//   display: none;
+// }
+
+// input[type='checkbox']:checked ~ .checkbox__label::before {
+//   width: 21px;
+//   height: 10px;
+//   border-color: #00bad2;
+//   border-top-style: none;
+//   border-right-style: none;
+//   transform: rotate(-45deg);
+// }
+
+select {
+  margin: 50px;
+  width: 150px;
+  padding: 5px 35px 5px 5px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  height: 34px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(https://stackoverflow.com/favicon.ico) 96% / 15% no-repeat
+    #eee;
+}
+
+select::-ms-expand {
+  display: none;
+}

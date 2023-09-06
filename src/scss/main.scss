@@ -1,0 +1,13 @@
+//сюда добавлять импорты стилей, шрифтов, переменных
+@import './vars';
+// @import './fonts';
+
+@import './components/ui/modal';
+@import './components/ui/burger';
+@import './components/ui/tabs';
+@import './components/ui/radiocheckselect';
+@import './components/ui/swiper';
+@import './components/ui/options';
+
+@import './components/section1';
+@import './components/map';

@@ -1,0 +1,46 @@
+<form method="post" target="_blank" id="form" class="rgb-form">
+  <label for="name" class="rgb-form__label" id="label-name">
+    Ваше ім’я*
+    <input
+      class="rgb-form__input"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Ваше ім’я"
+      required
+      minlength="1"
+      maxlength="30"
+    />
+    <div class="rgb-form__error-message">Введіть ім’я</div>
+  </label>
+  <label for="phone" class="rgb-form__label" id="label-phone">
+    Ваш телефон*
+    <input
+      class="rgb-form__input my-int-tel"
+      type="tel"
+      id="phone"
+      name="phone"
+      required
+    />
+    <div class="rgb-form__error-message-phone">Некоректний номер телефону</div>
+  </label>
+  <label for="email" class="rgb-form__label" id="label-email">
+    Ваша електронна адреса*
+    <input
+      class="rgb-form__input"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Ваша електронна адреса"
+      required
+    />
+    <div class="rgb-form__error-message-email">
+      Некоректна електронна адреса
+    </div>
+  </label>
+  <input id="phone2" type="hidden" name="phone2" value="" />
+  <button type="submit" class="rgb-form__btn">Отримати консультацію</button>
+  <button data-modals-open type="button" class="rgb-modal__btn">
+    Відкрити модальне вікно
+  </button>
+</form>

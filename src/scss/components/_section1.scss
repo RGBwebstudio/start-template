@@ -1,0 +1,77 @@
+.rgb-form {
+  width: 600px;
+  background-color: #f0f0f0;
+  &__label {
+    display: block;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: calc(22 / 14);
+    letter-spacing: -0.28px;
+    &.red-border {
+      color: red;
+    }
+    &.green-border {
+      color: green;
+    }
+  }
+
+  &__input {
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    color: black;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+    width: 100%;
+    &::placeholder {
+      color: black;
+      opacity: 0.5;
+      padding-left: 0;
+    }
+    &:focus .rgb-form__label {
+      color: black;
+    }
+    &:invalid + .rgb-form__label {
+      color: red;
+    }
+  }
+
+  &__error-message,
+  &__error-message-phone,
+  &__error-message-email {
+    color: red;
+    font-weight: 700;
+    text-align: right;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    &.visible {
+      opacity: 1;
+    }
+    &:first-child {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.iti {
+  display: block !important;
+}
+
+.iti--separate-dial-code .iti__selected-flag {
+  background-color: transparent !important;
+  position: relative;
+  color: black;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  padding-bottom: 10px;
+  &::placeholder {
+    color: grey;
+    font-size: 16px;
+    line-height: calc(26 / 16);
+  }
+}

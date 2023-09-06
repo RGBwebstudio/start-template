@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ua" class="page">
+  <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#111111" />
+  <title>Стартовый шаблон</title>
+
+  <link rel="stylesheet" href="css/main.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css"></link>
+  <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+
+  <script defer src="js/main.js"></script>
+</head>
+
+<!-- Здесь подключены стили на телефонный инпут международный и стили на аккордеон и стили на свайпер -->
+
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <button type="button" id="open-burger-btn" class="header__burger">
+      <img
+        id="burger-icon-btn"
+        src="img/burger-icon.svg"
+        width="20"
+        alt="burger icon"
+        class="burger-icon"
+      />
+    </button>
+  </div>
+  <div id="burger-menu" class="burger-menu hide">
+  <div class="burger-menu-close" id="burger-menu-close">
+    <img src="img/modal-close.svg" width="19" height="19" alt="close" />
+  </div>
+  <div class="burger-menu__up">
+    <nav class="burger-menu__nav">Тут будут ваши ссылки</nav>
+  </div>
+</div>
+
+</header>
+
+
+    <main class="main">
+      <form method="post" target="_blank" id="form" class="rgb-form">
+  <label for="name" class="rgb-form__label" id="label-name">
+    Ваше ім’я*
+    <input
+      class="rgb-form__input"
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Ваше ім’я"
+      required
+      minlength="1"
+      maxlength="30"
+    />
+    <div class="rgb-form__error-message">Введіть ім’я</div>
+  </label>
+  <label for="phone" class="rgb-form__label" id="label-phone">
+    Ваш телефон*
+    <input
+      class="rgb-form__input my-int-tel"
+      type="tel"
+      id="phone"
+      name="phone"
+      required
+    />
+    <div class="rgb-form__error-message-phone">Некоректний номер телефону</div>
+  </label>
+  <label for="email" class="rgb-form__label" id="label-email">
+    Ваша електронна адреса*
+    <input
+      class="rgb-form__input"
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Ваша електронна адреса"
+      required
+    />
+    <div class="rgb-form__error-message-email">
+      Некоректна електронна адреса
+    </div>
+  </label>
+  <input id="phone2" type="hidden" name="phone2" value="" />
+  <button type="submit" class="rgb-form__btn">Отримати консультацію</button>
+  <button data-modals-open type="button" class="rgb-modal__btn">
+    Відкрити модальне вікно
+  </button>
+</form>
+
+      <section>
+  <div id="map"></div>
+</section>
+
+      <div class="accordion-container">
+  <div class="ac">
+    <h2 class="ac-header">
+      <button type="button" class="ac-trigger">
+        Lorem ipsum dolor sit amet.
+      </button>
+    </h2>
+    <div class="ac-panel">
+      <p class="ac-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+  </div>
+
+  <div class="ac">
+    <h2 class="ac-header">
+      <button type="button" class="ac-trigger">
+        Lorem ipsum dolor sit amet.
+      </button>
+    </h2>
+    <div class="ac-panel">
+      <p class="ac-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+  </div>
+
+  <div class="ac">
+    <h2 class="ac-header">
+      <button type="button" class="ac-trigger">
+        Lorem ipsum dolor sit amet.
+      </button>
+    </h2>
+    <div class="ac-panel">
+      <p class="ac-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+    </div>
+  </div>
+</div>
+ <div class="content">
+  <div class="container">
+    <div class="info">
+      <div class="tabs">
+        <div class="tabs__item">Активная вкладка</div>
+        <div class="tabs__item">Вкладка #2</div>
+        <div class="tabs__item">Вкладка #3</div>
+        <div class="tabs__item">Вкладка #4</div>
+      </div>
+      <div class="tabs__content">
+        <div class="tabs__description">
+          Активная вкладка #1 при открытии страницы по умолчанию раскрыта.
+        </div>
+      </div>
+      <div class="tabs__content">
+        <div class="tabs__description">Контент второй вкладки..</div>
+      </div>
+      <div class="tabs__content">
+        <div class="tabs__description">Контент третьей вкладки..</div>
+      </div>
+      <div class="tabs__content">
+        <div class="tabs__description">Контент четвертой вкладки..</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="feature-letter">R</div> -->
+
+<div class="img-wrap">
+  <img
+    width="500"
+    height="500"
+    src="https://as2.ftcdn.net/v2/jpg/01/68/22/47/1000_F_168224770_ie6YCGOOp7rKIi1Z6zf8aSg8GcTW1ClZ.jpg"
+    alt="Image"
+  />
+</div>
+
+<svg width="0" height="0">
+  <defs>
+    <clipPath id="myClip">
+      <!-- Верхний левый круг -->
+      <circle cx="60" cy="60" r="60" />
+      <!-- Верхний правый круг -->
+      <circle cx="160" cy="60" r="60" />
+      <!-- Нижний левый круг -->
+      <circle cx="60" cy="160" r="60" />
+      <!-- Нижний правый круг -->
+      <circle cx="160" cy="160" r="60" />
+      <!-- Центральный круг -->
+      <circle cx="120" cy="120" r="60" />
+    </clipPath>
+  </defs>
+</svg>
+
+      <div class="radio">
+  <h3 class="radio__title">Заголовок радио кнопок</h3>
+
+  <ul class="radio__list">
+    <li class="radio__item">
+      <input type="radio" id="f-option" name="selector" />
+      <label for="f-option" class="radio__label">Вариант 1</label>
+
+      <div class="check"></div>
+    </li>
+
+    <li class="radio__item">
+      <input type="radio" id="s-option" name="selector" />
+      <label for="s-option" class="radio__label">Вариант 2</label>
+
+      <div class="check"><div class="inside"></div></div>
+    </li>
+
+    <li class="radio__item">
+      <input type="radio" id="t-option" name="selector" />
+      <label for="t-option" class="radio__label">Вариант 3</label>
+
+      <div class="check"><div class="inside"></div></div>
+    </li>
+  </ul>
+</div>
+
+<div class="checkbox">
+  <h3 class="checkbox__title">Заголовок чекбоксов</h3>
+  <div>
+    <input type="checkbox" id="answer1" />
+    <label for="answer1" class="checkbox__label">Вариант 11</label>
+  </div>
+  <div>
+    <input type="checkbox" id="answer2" />
+    <label for="answer2" class="checkbox__label">Вариант 21</label>
+  </div>
+  <div>
+    <input type="checkbox" id="answer3" />
+    <label for="answer3" class="checkbox__label">Вариант 31</label>
+  </div>
+</div>
+
+<select>
+  <option>Apples</option>
+  <option selected>Pineapples</option>
+  <option>Chocklate</option>
+  <option>Pancakes</option>
+</select>
+
+      <div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <img class="swiper-img" src="img/cat1.jpg" alt="cat" />
+    </div>
+    <div class="swiper-slide">
+      <img class="swiper-img" src="img/cat2.png" alt="cat" />
+    </div>
+    <div class="swiper-slide">
+      <img class="swiper-img" src="img/cat3.jpg" alt="cat" />
+    </div>
+    ...
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <!-- If we need scrollbar -->
+  <div class="swiper-scrollbar"></div>
+</div>
+ <div class="options">
+  <div
+    class="option active"
+    style="
+      --optionBackground: url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);
+    "
+  >
+    <div class="shadow"></div>
+    <div class="label">
+      <div class="icon">
+        <i class="fas fa-walking"></i>
+      </div>
+      <div class="info">
+        <div class="main">Blonkisoaz</div>
+        <div class="sub">Omuke trughte a otufta</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="option"
+    style="
+      --optionBackground: url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);
+    "
+  >
+    <div class="shadow"></div>
+    <div class="label">
+      <div class="icon">
+        <i class="fas fa-snowflake"></i>
+      </div>
+      <div class="info">
+        <div class="main">Oretemauw</div>
+        <div class="sub">Omuke trughte a otufta</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="option"
+    style="
+      --optionBackground: url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);
+    "
+  >
+    <div class="shadow"></div>
+    <div class="label">
+      <div class="icon">
+        <i class="fas fa-tree"></i>
+      </div>
+      <div class="info">
+        <div class="main">Iteresuselle</div>
+        <div class="sub">Omuke trughte a otufta</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="option"
+    style="
+      --optionBackground: url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);
+    "
+  >
+    <div class="shadow"></div>
+    <div class="label">
+      <div class="icon">
+        <i class="fas fa-tint"></i>
+      </div>
+      <div class="info">
+        <div class="main">Idiefe</div>
+        <div class="sub">Omuke trughte a otufta</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="option"
+    style="
+      --optionBackground: url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);
+    "
+  >
+    <div class="shadow"></div>
+    <div class="label">
+      <div class="icon">
+        <i class="fas fa-sun"></i>
+      </div>
+      <div class="info">
+        <div class="main">Inatethi</div>
+        <div class="sub">Omuke trughte a otufta</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+
+    <footer class="container container--lg footer">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script>
+    new Accordion('.accordion-container');
+  </script>
+</footer>
+
+<!-- здесь стили на международный телефонный инпут и инициализация аккордеона -->
+ <div class="myModal" id="myModal" aria-hidden="true">
+  <div class="myModal__content">
+    <div class="myModal__content-close">
+      <img
+        data-modals-close
+        src="img/modal-close.svg"
+        width="19"
+        height="19"
+        alt="close"
+      />
+    </div>
+    <p>Здесь будет ваш контент</p>
+  </div>
+</div>
+
+  </body>
+</html>
+
+<!-- в секции section1 подключено модальное окно и форма с валидацией. перенести в нужную секцию по необходимости. из импорта отключить -->
+
+<!-- в секции sectionWithMap подключена гугл карта со скриптом дефолтной темы, дефолных настроек и вывода метки. добавить апи ключ и все будет работать корректно -->
+
+<!-- в хедере добавлен скрипт открытия бургер меню с анимацией без стилей. и подключена элементарная хтмл разметка -->
+
+<!-- в секции accordion добавлена разметка аккордеона, его скрипты и стили подключены в head. по необходимости добавить в нужную секцию и изменить контент -->
+
+<!-- в секции tabs добавлена разметка табов, его скрипты и стили подключены в джс и сас с соответствующими названиями. по необходимости добавить в нужную секцию и изменить контент -->
+
+<!-- в секции radiocheckselect добавлена разметка радиокнопок, секбоксов и селекта, его стили подключены в сас с соответствующими названиями. по необходимости добавить в нужную секцию и изменить контент -->
+
+<!-- в секции swiper добавлена разметка слайдеров с примером 3 карточек, а так же пагинация, навигация и скролл бар. стили сидин на свайпер добавлены в head -->
+
+<!-- в секции options добавлен пример карточек, которые разъезжается при клике. его стили и джс добавлены в файлы с соответствующими названиями -->

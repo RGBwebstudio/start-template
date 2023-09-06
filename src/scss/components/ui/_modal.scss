@@ -1,0 +1,49 @@
+.myModal {
+  position: fixed;
+  justify-content: center;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.1s linear;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  z-index: 20;
+  overflow: auto;
+  &__content {
+    margin: auto 15px;
+    max-width: 80vw;
+    max-height: 50vh;
+    background-color: #fff;
+    &-close {
+      position: absolute;
+      top: 60px;
+      right: 100px;
+      display: flex;
+      justify-content: flex-end;
+      transition: all 0.3s ease-in-out;
+      & img:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 924px) {
+  .myModal {
+    &__content {
+      &-close {
+        top: 60px;
+        right: 30px;
+      }
+    }
+  }
+}

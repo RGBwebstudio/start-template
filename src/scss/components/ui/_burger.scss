@@ -1,0 +1,31 @@
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  height: calc(100vh - 68px);
+
+  padding: 0;
+  z-index: 10;
+  overflow-y: auto;
+  transition: all 0.2s linear;
+
+  &__nav {
+    padding: 30px 20px 0;
+  }
+  &.hide {
+    transform: translateX(-100%);
+  }
+  &__list {
+    margin-bottom: 40px;
+  }
+}
+.header__dropdown-burger {
+  display: block;
+  margin-left: 20px;
+}
+.burger-menu__up {
+  margin-bottom: 20px;
+}
